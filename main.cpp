@@ -73,18 +73,23 @@ void variableDeclarations()
     int size = 4;
     int height = 67;
     int weight = 23;
+    
     unsigned int dontKnow = 0;
     unsigned int inputValue = 8922;
     unsigned int rawData = 1234;
+    
     float amount = 4.5f;
     float testValue = 78.f;
     float readCount = 323.8f;
+    
     double iterations = 4;
     double divisionOutcome = 3.9;
     double mainValue = 265.89;
+    
     char firstLetter = 'a';
     char separator = '|';
     char plusSign = '+';
+    
     bool isSuccess = true;
     bool computeVallue = false;
     bool hasInternalComponent = true;
