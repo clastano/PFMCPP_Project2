@@ -17,7 +17,12 @@ video: Chapter 2 - Part 3
  1) Write down the names of the 6 major primitive types available in C++  here:
  
  
- 
+ int
+ unsigned int
+ float
+ double
+ char
+ bool
  
  
  
@@ -65,9 +70,26 @@ void variableDeclarations()
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
     
-
+    int size = 4;
+    int height = 67;
+    int weight = 23;
+    unsigned int dontKnow = 0;
+    unsigned int inputValue = 8922;
+    unsigned int rawData = 1234;
+    float amount = 4.5f;
+    float testValue = 78.f;
+    float readCount = 323.8f;
+    double iterations = 4;
+    double divisionOutcome = 3.9;
+    double mainValue = 265.89;
+    char firstLetter = 'a';
+    char separator = '|';
+    char plusSign = '+';
+    bool isSuccess = true;
+    bool computeVallue = false;
+    bool hasInternalComponent = true;
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, size, height, weight, dontKnow, inputValue, rawData, amount, testValue, readCount, iterations, divisionOutcome, mainValue, firstLetter, separator, plusSign, isSuccess, computeVallue, hasInternalComponent); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,42 +106,89 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
+void openCase(int secureKey = -1)
+{
+    ignoreUnused(secureKey); 
+}
 
 /*
  2)
  */
+char getFirstLetterOfTitle(int titleId, bool searchOnLine = true)
+{ 
+    ignoreUnused(titleId, searchOnLine);
+    return {}; 
+}
 
 /*
  3)
  */
+int countHotelReservations(int hotelId, char customerType = 'a', float costLimit = 1000.f)
+{ 
+    ignoreUnused(hotelId, customerType, costLimit);
+    return {}; 
+}
 
 /*
  4)
  */
+bool isYourHouseYellow(char cityId = 'B', int zipCode = 90210)
+{ 
+    ignoreUnused(cityId, zipCode);
+    return {}; 
+}
 
 /*
  5)
  */
+float computeBalance(bool applyRoundValues = true, char algorithmId = 'g')
+{
+    ignoreUnused(applyRoundValues, algorithmId);
+    return {}; 
+}
 
 /*
  6)
  */
+void verifyPresence(char itemType, float bucketId = 9999)
+{
+    ignoreUnused(itemType, bucketId); 
+}
 
 /*
  7)
  */
+bool isTestPassed(char testIdentifier = 'k', double testInputValue = 4.56)
+{ 
+    ignoreUnused(testIdentifier, testInputValue);
+    return {}; 
+}
 
 /*
  8)
  */
+float getCircleRadius(char shapeId = 'r', double circleLength = 234.4, int parentContainer = 3)
+{
+    ignoreUnused(shapeId, circleLength, parentContainer); 
+    return {}; 
+}
 
 /*
  9)
  */
+void cantThinkAnyFunctionsAnymore(bool guess = true)
+{
+    ignoreUnused(guess);
+}
 
 /*
  10)
  */
+bool didIGetItRight(char moneySwapType = 'h', bool isRushTime = false, int divider = 7)
+{
+    ignoreUnused( moneySwapType, isRushTime, divider);
+    return {}; 
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -141,27 +210,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    openCase();
     
     //2)
+    auto firstLetterOfTitle = getFirstLetterOfTitle(789, false);
     
     //3)
+    auto reservationsCount = countHotelReservations(45);
     
     //4)
+    auto isYellow = isYourHouseYellow('Q');
     
     //5)
+    auto balance = computeBalance(false, 'u');
     
     //6)
+    verifyPresence('r', 23);
     
     //7)
+    auto isPassed = isTestPassed('p', 67);
     
     //8)
+    auto radius = getCircleRadius('s', 345, 90);
     
     //9)
+    cantThinkAnyFunctionsAnymore(true);
     
     //10)
+    auto gotIt = didIGetItRight('e', false, 12);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, firstLetterOfTitle, reservationsCount, isYellow, balance, isPassed, radius, gotIt);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
